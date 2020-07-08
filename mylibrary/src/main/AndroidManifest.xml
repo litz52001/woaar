@@ -1,5 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tzkj.mylibrary">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smarttechcloud.api"
+    android:versionCode="1"
+    android:versionName="1.0" >
 
-    /
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="28" />
+
+    <application>
+
+        <!--
+         <receiver
+            android:name=".receiver.AlarmReceiver"
+             android:enabled="true"
+             android:exported="true">
+             <intent-filter>
+                 <action android:name="repeatAlarm" />
+             </intent-filter>
+         </receiver>
+        -->
+        <service android:name="com.smarttechcloud.api.service.AlarmService" />
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <!-- <service android:name=".service.MqttConnectService"></service> -->
+        <!-- <service android:name=".service.MqttServer"></service> -->
+    </application>
+
 </manifest>
